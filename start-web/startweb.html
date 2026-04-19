@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motosiklet Mağazası</title>
+  <link rel="stylesheet" href="startweb.css">
+  <script src="startweb.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <h1><span class="moto">Moto</span><span class="ride">Ride</span> <span class="shop">Shop</span></h1>
+    <div class="header-buttons">
+      <a href="../index.html"><button id="homeBtn">Əsas səhifəyə qayıdın</button></a>
+      <button id="openCartBtn">Səbət</button>
+      <button id="openFavBtn">Favorilər</button>
+      <input type="text" id="searchInput" placeholder="Motosiklet adı ilə axtar...">
+    </div>
+  </header>
+
+  <section id="moto-list">
+    <div id="allmotocard">
+      <h2 class="section-title">Yamaha</h2>
+      <div class="moto-card" data-name="Yamaha R1" data-price="5000">
+        <img src="img  moto/yamaha r1.avif" alt="Yamaha-r1">
+        <h3>Yamaha R1</h3>
+        <p>Qiymət: 5000 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+
+      <div class="moto-card" data-name="Yamaha R2" data-price="6500">
+        <img src="img  moto/yamaha r2.avif" alt="Yamaha-r2">
+        <h3>Yamaha R2</h3>
+        <p>Qiymət: 6500 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+
+      <div class="moto-card" data-name="Yamaha R4" data-price="6500">
+        <img src="img  moto/yamaha r4.avif" alt="Yamaha-r4">
+        <h3>Yamaha R4</h3>
+        <p>Qiymət: 6500 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+
+      <div class="moto-card" data-name="Yamaha R6" data-price="6500">
+        <img src="img  moto/yamaha r 6.avif" alt="Yamaha-r6">
+        <h3>Yamaha R6</h3>
+        <p>Qiymət: 6500 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+
+      <div class="moto-card" data-name="Yamaha R7" data-price="6500">
+        <img src="img  moto/yamaha r 7.avif" alt="Yamaha-r7">
+        <h3>Yamaha R7</h3>
+        <p>Qiymət: 6500 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+    </div>
+  </section>
+
+  <section id="moto-list">
+    <div id="allmotocard">
+      <h2 class="section-title">Kawasaki</h2>
+      <div class="moto-card" data-name="Kawasaki h2" data-price="5000">
+        <img src="img  moto/kawasaki h2.avif" alt="Kawasaki h2 ">
+        <h3>Kawasaki H2</h3>
+        <p>Qiymət: 5000 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+
+      <div class="moto-card" data-name="Kawasaki h2r" data-price="6500">
+        <img src="img  moto/kawasaki h2r.avif" alt="Kawasaki h2r">
+        <h3>Kawasaki H2R</h3>
+        <p>Qiymət: 6500 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+
+      <div class="moto-card" data-name="Kawasaki zx 10r" data-price="6500">
+        <img src="img  moto/kawasaki zx10r.jpeg" alt="Kawasaki zx 10r">
+        <h3>Kawasaki ZX 10R</h3>
+        <p>Qiymət: 6500 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+
+      <div class="moto-card" data-name="Kawasaki zx 6r" data-price="6500">
+        <img src="img  moto/kawasaki zx 6r.avif" alt="Kawasaki zx 6r">
+        <h3>Kawasaki ZX 6R</h3>
+        <p>Qiymət: 6500 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+
+      <div class="moto-card" data-name="Kawasaki nija 650" data-price="6500">
+        <img src="img  moto/kawasaki nija 650.avif" alt="Kawasaki nija 650">
+        <h3>Kawasaki NİJA 650</h3>
+        <p>Qiymət: 6500 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+    </div>
+  </section>
+
+    <section id="moto-list">
+    <div id="allmotocard">
+      <h2 class="section-title">Suzuki</h2>
+      <div class="moto-card" data-name="Suzuki GSX-S1000GT" data-price="5000">
+        <img src="img  moto/Suzuki GSX-S1000GT.jpg" alt="Suzuki GSX-S1000GT">
+        <h3>Suzuki GSX-S1000GT</h3>
+        <p>Qiymət: 5000 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+
+      <div class="moto-card" data-name="Suzuki GSXR 1000 RR" data-price="6500">
+        <img src="img  moto/Suzuki GSXR 1000 RR.avif" alt="Suzuki GSXR 1000 RR">
+        <h3>Suzuki GSXR 1000 RR</h3>
+        <p>Qiymət: 6500 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+
+      <div class="moto-card" data-name="Suzuki gsxr 750 k8" data-price="6500">
+        <img src="img  moto/Suzuki gsxr 750 k8.avif" alt="Suzuki gsxr 750 k8">
+        <h3>Suzuki GSXR 750 K8</h3>
+        <p>Qiymət: 6500 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+
+      <div class="moto-card" data-name="Suzuki GSX 8R" data-price="6500">
+        <img src="img  moto/Suzuki gsx 8=r.jpg" alt="Suzuki GSX 8R">
+        <h3>Suzuki GSX 8R</h3>
+        <p>Qiymət: 6500 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+
+      <div class="moto-card" data-name="Suzuki hayabusa" data-price="6500">
+        <img src="img  moto/Suzuki hayabusa.avif" alt="Suzuki hayabusa">
+        <h3>Suzuki HAYABUSA</h3>
+        <p>Qiymət: 6500 AZN</p>
+        <button class="buyBtn">Səbətə Əlavə Et</button>
+        <i class="fa-regular fa-star favBtn"></i>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Sebet paneli -->
+  <div id="cartPanel" class="cart-panel">
+    <h2>Səbət</h2>
+    <ul id="cart-items"></ul>
+    <p id="totalPrice">Ümumi qiymət: 0 AZN</p>
+    <button id="confirmBtn">Sifarişi təsdiqlə</button>
+    <button id="closeCartBtn">Bağla</button>
+  </div>
+
+  <!-- Favorilər paneli -->
+  <div id="favPanel" class="fav-panel">
+    <h2>Favorilər</h2>
+    <ul id="fav-items"></ul>
+    <button id="closeFavBtn">Bağla</button>
+  </div>
+
+
+  <div id="order-animation"></div>
+</body>
+
+</html>
