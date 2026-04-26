@@ -401,3 +401,14 @@ body {
   left: 0;
 }
 
+@media (max-width: 768px) {
+  #moto-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .moto-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

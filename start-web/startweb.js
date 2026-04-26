@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeCartBtn = document.getElementById("closeCartBtn");
   const confirmBtn = document.getElementById("confirmBtn");
 
-  // Əsas səhifəyə qayıt
+  // esas sehifeye qayıt
   homeBtn.addEventListener("click", () => window.location.href = "index.html");
 
   // Sebeti aç/bağla
   openCartBtn.addEventListener("click", () => document.getElementById("cartPanel").classList.add("open"));
   closeCartBtn.addEventListener("click", () => document.getElementById("cartPanel").classList.remove("open"));
 
-  // Al düymələri
+  // Al düymeleri
   document.querySelectorAll(".buyBtn").forEach(btn => {
     btn.addEventListener("click", () => {
       const card = btn.closest(".moto-card");
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Sifarişi təsdiqlə
+  // sifaris tesdiqle
   confirmBtn.addEventListener("click", () => {
     if (cart.length === 0) {
       alert("Bu əməliyyatı etmək üçün ən azı 1 məhsul seçməlisiniz!");
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Sebet yeniləmə
+// Sebet yenileme
 function updateCart() {
   const cartList = document.getElementById("cart-items");
   const totalPrice = document.getElementById("totalPrice");
@@ -148,3 +148,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+let favBox = [];
+
+document.querySelectorAll(".favBtn").forEach(star => {
+  star.addEventListener("click", () => {
+    const card = star.closest(".moto-card");
+    const name = card.dataset.name;
+    const img = card.querySelector("img").src;
+
+    if (!star.classList.contains("filled")) {
+      // Ulduz yanir ve favorilere dusur 
+      star.classList.add("filled");
+      star.classList.replace("fa-regular", "fa-solid");
+
+      if (!favBox.find(f => f.name === name)) {
+        favBox.push({ name, img });
+      } else {
+        alert("Siz bu nəqliyyatı artıq favorilər bölməsinə əlavə etmisiniz!");
+      }
+    } else {
+
+          // Ulduz yanir ve favorilere dusur silinir
+      star.classList.remove("filled");
+      star.classList.replace("fa-solid", "fa-regular");
+      favBox = favBox.filter(f => f.name !== name);
+    }
+    refreshFav();
+  });
+});
+
+function refreshFav() {
+  const favList = document.getElementById("fav-items");
+  favList.innerHTML = "";
+  favBox.forEach((f, index) => {
+    favList.innerHTML += `
+      <li>
+        <img src="${f.img}" alt="${f.name}" style="width:60px;height:auto;border-radius:5px;">
+        ${f.name}
+        <button onclick="delFav(${index})">Favoridən sil</button>
+      </li>`;
+  });
+}
+
+function delFav(index) {
+  const removed = favBox[index].name;
+  favBox.splice(index, 1);
+  refreshFav();
+
+  // Kartdaki ulduzu sndurmek
+  document.querySelectorAll(".moto-card").forEach(card => {
+    if (card.dataset.name === removed) {
+      const star = card.querySelector(".favBtn");
+      star.classList.remove("filled");
+      star.classList.replace("fa-solid", "fa-regular");
+    }
+  });
+}
